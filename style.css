@@ -1,28 +1,4 @@
 /* Bootstrap Overwrites */
-section#welcomeMessage {
-  min-height: 60vh;
-  background:center / cover url(assets/header-image.jpg) no-repeat;
-  color: #fff;
-  position: relative;
-}
-
-.container-fluid nav.navbar {
-  margin-left: -15px;
-  margin-right: -15px;
-  background-color:#bbb
-}
-
-#welcomeMessage .contact-form {
-  color: initial;
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  /*makes it break the grid*/
-  position: absolute;
-  right: 5rem;
-  bottom: -5rem;
-}
-
 /* aligns all content to the middle of the containing section */
 section.row.flex {
   display: flex;
@@ -30,13 +6,30 @@ section.row.flex {
   align-content: center;
 }
 
-/* Vertical centering friendly way to do a hero image, also makes it a bit harder for people to drag images off your site*/
-.hero .image-holder {
-  min-height: 30em;
-  width: 30em;
-  margin: 0 auto;
-  background-size: cover;
-  background-position: center
+.container-fluid nav.navbar {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: #bbb
+}
+
+/* X Bootstrap Overwrites X */
+/* welcomeMessage */
+section#welcomeMessage {
+  min-height: 60vh;
+  background: center / cover url(assets/header-image.jpg) no-repeat;
+  color: #fff;
+  position: relative;
+}
+
+#welcomeMessage .contact-form {
+  color: initial;
+  background: #f7f7f7;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  /*makes it break the grid*/
+  position: absolute;
+  right: 5rem;
+  bottom: -5rem;
 }
 
 .form-row.description {
@@ -53,3 +46,24 @@ section.row.flex {
   margin: 0 auto;
   /*overwrites default*/
 }
+
+/* X welcomeMessage X  */
+/* aboutUs */
+#aboutUs {
+  min-height: 75vh;
+}
+
+#aboutUs .copy {
+  font-size: 1.3rem;
+}
+
+/* Vertical centering friendly way to do a hero image, also makes it a bit harder for people to drag images off your site*/
+.hero .image-holder {
+  min-height: 30em;
+  width: 30em;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center
+}
+
+/* X aboutUs X */
