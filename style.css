@@ -1,2 +1,54 @@
 /* Bootstrap Overwrites */
-section#welcomeMessage{display: flex;flex-wrap:wrap;justify-content: center;align-items: center; justify-content: center;}
+section#welcomeMessage {
+  min-height: 60vh;
+  background: #bbb;
+  color: #fff;
+  position: relative;
+}
+
+.container-fluid nav.navbar {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+#welcomeMessage .contact-form {
+  color: initial;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  /*makes it break the grid*/
+  position: absolute;
+  right: 5rem;
+  bottom: -5rem;
+}
+
+/* aligns all content to the middle of the containing section */
+section.row.flex {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+/* Vertical centering friendly way to do a hero image, also makes it a bit harder for people to drag images off your site*/
+.hero .image-holder {
+  min-height: 30em;
+  width: 30em;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center
+}
+
+.form-row.description {
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1.3rem;
+  opacity: 0.5;
+}
+
+.form-row.description hr {
+  border-top: 1px solid rgb(206, 212, 218);
+  flex-grow: 1;
+  align-self: center;
+  margin: 0 auto;
+  /*overwrites default*/
+}
