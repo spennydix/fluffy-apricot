@@ -7,15 +7,19 @@ section.row.flex {
 }
 
 .container-fluid nav.navbar {
-  margin-left: -15px;
-  margin-right: -15px;
-  background-color: #bbb
+  background-color:rgba(0, 0, 0, 0.6);
+}
+nav.navbar.floatingNav{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+section {
+  min-height: 80vh;
 }
 
 /* X Bootstrap Overwrites X */
 /* welcomeMessage */
 section#welcomeMessage {
-  min-height: 60vh;
   background: center / cover url(assets/header-image.jpg) no-repeat;
   color: #fff;
   position: relative;
@@ -23,7 +27,7 @@ section#welcomeMessage {
 
 #welcomeMessage .contact-form {
   color: initial;
-  background: #f7f7f7;
+  background: #f5f5f5;
   border-radius: 6px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   /*makes it break the grid*/
@@ -49,10 +53,9 @@ section#welcomeMessage {
 
 /* X welcomeMessage X  */
 /* aboutUs */
-#aboutUs {
-  min-height: 75vh;
+section#aboutUs{
+  padding:10vh 2.5vw;
 }
-
 #aboutUs .copy {
   font-size: 1.3rem;
 }
@@ -67,3 +70,54 @@ section#welcomeMessage {
 }
 
 /* X aboutUs X */
+/* servicesOffered */
+section#servicesOffered {
+  text-align: center;
+}
+
+#servicesOffered .cards .card {
+  padding: 1.5rem;
+  background:#f5f5f5;
+}
+
+#servicesOffered .cards>div {
+  padding: 15px;
+}
+#servicesOffered .card i{
+      font-size: 3rem;
+}
+
+/* X ServicesOffered X */
+
+/* staff */
+section#staff{
+  text-align: center;
+}
+/* X staff X */
+
+/* commitment */
+section#commitment{
+  background-color:#f5f5f5;
+}
+.hero .contain{
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+/* X commitment X  */
+
+
+/* footer */
+footer.page-footer {
+    background: #424242;
+    color: #fff;
+    margin: 0 -15px;
+    padding: 15px 15px 0;
+}
+footer.page-footer a{color:#b3e5fc}
+footer.page-footer a:hover{color:#4fc3f7}
+
+.footer-copyright.text-center.py-3 {
+    background-color: rgba(0,0,0,0.2);
+    margin: 0 -15px;
+}
+/* X footer X  */
