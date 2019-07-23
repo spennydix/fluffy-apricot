@@ -9,6 +9,9 @@ section.row.flex {
 .container-fluid nav.navbar {
   background-color: rgba(0, 0, 0, 0.6);
 }
+div#navbarNav{
+  justify-content:flex-end;
+}
 
 nav.navbar.floatingNav {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
