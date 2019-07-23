@@ -7,9 +7,10 @@ section.row.flex {
 }
 
 .container-fluid nav.navbar {
-  background-color:rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
-nav.navbar.floatingNav{
+
+nav.navbar.floatingNav {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -30,10 +31,22 @@ section#welcomeMessage {
   background: #f5f5f5;
   border-radius: 6px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  /*makes it break the grid*/
-  position: absolute;
-  right: 5rem;
-  bottom: -5rem;
+}
+
+@media screen and (orientation:landscape) {
+  #welcomeMessage .contact-form {
+    /*makes it break the grid*/
+    position: absolute;
+    right: 5rem;
+    bottom: -5rem;
+  }
+}
+
+@media screen and (orientation:portrait) {
+  #welcomeMessage .contact-form {
+    /*makes it break the grid*/
+    position: initial ;
+  }
 }
 
 .form-row.description {
@@ -53,9 +66,10 @@ section#welcomeMessage {
 
 /* X welcomeMessage X  */
 /* aboutUs */
-section#aboutUs{
-  padding:10vh 2.5vw;
+section#aboutUs {
+  padding: 10vh 2.5vw;
 }
+
 #aboutUs .copy {
   font-size: 1.3rem;
 }
@@ -77,47 +91,54 @@ section#servicesOffered {
 
 #servicesOffered .cards .card {
   padding: 1.5rem;
-  background:#f5f5f5;
+  background: #f5f5f5;
 }
 
 #servicesOffered .cards>div {
   padding: 15px;
 }
-#servicesOffered .card i{
-      font-size: 3rem;
+
+#servicesOffered .card i {
+  font-size: 3rem;
 }
 
 /* X ServicesOffered X */
-
 /* staff */
-section#staff{
+section#staff {
   text-align: center;
 }
-/* X staff X */
 
+/* X staff X */
 /* commitment */
-section#commitment{
-  background-color:#f5f5f5;
+section#commitment {
+  background-color: #f5f5f5;
 }
-.hero .contain{
-  background-size:contain;
+
+.hero .contain {
+  background-size: contain;
   background-repeat: no-repeat;
 }
+
 /* X commitment X  */
-
-
 /* footer */
 footer.page-footer {
-    background: #424242;
-    color: #fff;
-    margin: 0 -15px;
-    padding: 15px 15px 0;
+  background: #424242;
+  color: #fff;
+  margin: 0 -15px;
+  padding: 15px 15px 0;
 }
-footer.page-footer a{color:#b3e5fc}
-footer.page-footer a:hover{color:#4fc3f7}
+
+footer.page-footer a {
+  color: #b3e5fc
+}
+
+footer.page-footer a:hover {
+  color: #4fc3f7
+}
 
 .footer-copyright.text-center.py-3 {
-    background-color: rgba(0,0,0,0.2);
-    margin: 0 -15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 -15px;
 }
+
 /* X footer X  */
