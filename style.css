@@ -28,6 +28,7 @@ section#welcomeMessage {
   background: center / cover url(assets/header-image.jpg) no-repeat;
   color: #fff;
   position: relative;
+  margin-bottom: 4rem;
 }
 
 #welcomeMessage .contact-form {
@@ -42,7 +43,7 @@ section#welcomeMessage {
     /*makes it break the grid*/
     position: absolute;
     right: 5rem;
-    bottom: -5rem;
+    bottom: -7rem;
   }
 }
 
@@ -114,13 +115,24 @@ section#staff {
 
 /* X staff X */
 /* commitment */
-section#commitment {
-  background: url(assets/las-vegas-map.jpg) center no-repeat;
+#commitment {
+  position: relative;
+  overflow:hidden;
 }
 
 #commitment .col-12.col-sm-5.copy.p-3 {
   background-color: rgba(245, 245, 245, 0.7686274509803922);
   border-radius: 6px;
+}
+
+#commitment .bg-container {
+  background: url(assets/las-vegas-map.jpg) center no-repeat;
+  position: absolute;
+  width: 100%;
+  margin: 0 -3rem;
+  top: 0px;
+  height: 100%;
+background-size:cover;
 }
 
 .hero .contain {
