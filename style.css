@@ -80,7 +80,7 @@ section#aboutUs {
 /* Vertical centering friendly way to do a hero image, also makes it a bit harder for people to drag images off your site*/
 .hero .image-holder {
   min-height: 30em;
-  width: 30em;
+  width: auto;
   margin: 0 auto;
   background-size: cover;
   background-position: center
