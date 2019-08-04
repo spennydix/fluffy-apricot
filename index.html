@@ -36,29 +36,26 @@
 
 
 </head>
-
-<!-- <div class="modal d-none" tabindex="-1" role="dialog" style="background: rgba(0,0,0,0.8);align-items: center;height: 100vh;">
+<div id="eggmodal" class="modal" tabindex="-1" role="dialog" style="background: rgba(0,0,0,0.8);align-items: center;height: 100vh;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Zach abandoned us.</h5>
+        <h5 class="modal-title">You found an easter egg</h5>
       </div>
       <div class="modal-body">
-        <p>He left us on the hook for the domain. Also he cancelled our friendship. We have heard nothing from him in the past 6 days, he may be hurt.</p>
-        <p>
-          <b>He owes us Benihana</b>
-        </p>
+          <label for="passcode">Passcode</label>
+          <input id="passcode" type="password" class="form-control" id="inputPasscode" placeholder="hint: our best friend">
       </div>
       <div class="modal-footer">
-      <button type="button" class="btn btn-primary">He sounds like an ass</button>
+      <button type="button" id="eggbutton" class="btn btn-primary">submit</button>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 <body class="container-fluid">
   <nav class="navbar fixed-top navbar-dark navbar-expand-md">
-    <a class="navbar-brand" href="#">
+    <a id="logoegg" class="navbar-brand" href="#">
       <img src="assets/logo-white.png" width="30" height="30" class="d-inline-block align-top" alt="">
       Prime Audio Visuals
     </a>
@@ -344,7 +341,7 @@
     }
   });
 
-  $('#send-it').click(function(e) {
+  $('#send-it').click((e) => {
     e.preventDefault();
     const name = $('#inputName').val();
     const email = $('#inputEmail').val();
@@ -369,7 +366,7 @@
     $('#send-it').attr('disabled', true);
     $('#val-error').hide();
     $('#send').hide();
-    $('#loading').show();    
+    $('#loading').show();
 
     $.ajax({
       type: "POST",
@@ -377,7 +374,7 @@
       data: {
         text: `name info: ${name}, ${email}, ${phone}, event info: ${address}, ${city}, ${state}, ${zip}`
       },
-      success: function(response) {
+      success: (response) => {
         if (response.err == null) {
           $('#loading').hide();
           $('#success').show();
@@ -387,7 +384,26 @@
         }
       },
     });
-});
+  });
+
+  var eggCount = 0;
+  $('#logoegg').click((e) => {
+    eggCount++;
+    if (eggCount >= 10) {
+      $('#eggmodal').css('display', 'flex');
+    }
+  });
+
+  $('#eggbutton').click((e) => {
+    const passcode = $('#passcode').val();
+    $.ajax({
+      type: "POST",
+      url: "https://thecampus.market/kumar/egg",
+      data: {
+        passcode
+      }
+    });
+  });
 </script>
 
 </html>
