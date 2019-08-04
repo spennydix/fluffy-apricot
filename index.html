@@ -401,7 +401,12 @@
       url: "https://thecampus.market/kumar/egg",
       data: {
         passcode
-      }
+      },
+      success: (response) => {
+        if (!response.err) {
+          window.location.href = response.redirect;
+        }
+      },
     });
   });
 </script>
