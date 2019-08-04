@@ -90,19 +90,20 @@
     <h1 class="tagline p-5 display-3">Audio & Visuals<sup>3</sup></h1>
     <div class="contact-form col-10 offset-1 col-sm-5 offset-sm-0 col-lg-4 p-4 rellax" data-rellax-speed="1.5">
       <h4>Book us</h4>
+      <div id="val-error">All fields are required.</div>
       <form>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputName">Name</label>
-            <input required type="text" class="form-control" id="inputName" placeholder="Jane Doe">
+            <input required type="text" class="form-control" id="inputName" placeholder="Jane Doe" required>
           </div>
           <div class="form-group col-md-6">
             <label for="inputEmail">Email</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
           </div>
           <div class="form-group col-md-6">
             <label for="inputPhone">Phone Number</label>
-            <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="form-control" id="inputPhone" placeholder="XXX-XXX-XXXX">
+            <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="form-control" id="inputPhone" placeholder="XXX-XXX-XXXX" required>
           </div>
         </div>
 
@@ -113,15 +114,15 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="inputAddress">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
           </div>
           <div class="form-group col-6 col-md-6">
             <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
+            <input type="text" class="form-control" id="inputCity" required>
           </div>
           <div class="form-group col-2 col-md-2">
             <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
+            <select id="inputState" class="form-control" required>
               <option selected></option>
               <option>NV</option>
               <option>UT</option>
@@ -129,7 +130,7 @@
           </div>
           <div class="form-group col-4 col-md-4">
             <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
+            <input type="text" class="form-control" id="inputZip" required>
           </div>
         </div>
         <div class="form-group">
@@ -140,7 +141,12 @@
             </label>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Send it</button>
+        <button id="send-it" type="submit" class="btn btn-primary w-100">
+          <span id="send">Send it</span>
+          <span id="loading">Sending...</span>
+          <span id="success">Sent <i class="fas fa-check"></i></span>
+          <span id="error">An Error Occurred :(</span>
+        </button>
       </form>
     </div>
   </section>
@@ -338,16 +344,47 @@
     }
   });
 
-  $('button').click(function(e) {
+  $('#send-it').click(function(e) {
     e.preventDefault();
+    const name = $('#inputName').val();
+    const email = $('#inputEmail').val();
+    const phone = $('#inputPhone').val();
+    const address = $('#inputAddress').val();
+    const city = $('#inputCity').val();
+    const state = $('#inputState').val();
+    const zip = $('#inputZip').val();
+
+    // validate form hack
+    if (name == '' 
+        || email == '' 
+        || phone == '' 
+        || address == '' 
+        || city == '' 
+        || state == '' 
+        || zip == '') {
+      $('#val-error').show();
+      return false; 
+    }
+
+    $('#send-it').attr('disabled', true);
+    $('#val-error').hide();
+    $('#send').hide();
+    $('#loading').show();    
+
     $.ajax({
       type: "POST",
       url: "https://thecampus.market/kumar", // Don't tell Thomas
       data: {
-        text: 'penise'
+        text: `name info: ${name}, ${email}, ${phone}, event info: ${address}, ${city}, ${state}, ${zip}`
       },
-      success: function(result) {
-        alert('ok', result);
+      success: function(response) {
+        if (response.err == null) {
+          $('#loading').hide();
+          $('#success').show();
+        } else {
+          $('#loading').hide();
+          $('#error').show();
+        }
       },
     });
 });

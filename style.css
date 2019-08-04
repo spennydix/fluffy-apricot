@@ -185,5 +185,14 @@ footer.page-footer a:hover {
   background-color: rgba(0, 0, 0, 0.2);
   margin: 0 -15px;
 }
-
 /* X footer X  */
+
+
+
+#loading, #success, #error, #val-error {
+  display: none;
+}
+
+#val-error {
+  color: red;
+}
