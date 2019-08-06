@@ -74,9 +74,6 @@
           <a class="nav-link" href="#servicesOffered">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#staff">Staff</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="#commitment">Commitment</a>
         </li>
       </ul>
@@ -84,7 +81,7 @@
   </nav>
   <section id="welcomeMessage" class="row flex">
     <!-- FPO Need a title here, something like, "always working for you" fluffy, but related to AV -->
-    <h1 class="tagline p-5 display-3">Audio & Visuals<sup>3</sup></h1>
+    <h1 class="tagline p-5 display-3">Audio & Visuals</h1>
     <div class="contact-form col-10 offset-1 col-sm-5 offset-sm-0 col-lg-4 p-4 rellax" data-rellax-speed="1.5">
       <h4>Book us</h4>
       <div id="val-error">All fields are required.</div>
@@ -173,49 +170,40 @@
         Prime AV can handle any size event. We use the latest technology and best equipment, to help you inspire and connect with your audience.
       </p>
     </div>
+
+    Equipment Rentals for audio visual equipment
+Event or conference setup of said equipment
+Ability to tech and run equipment at event
+We have the ability to travel and set up mock trial recording equipment
+A/V in Booths at Expos or Conventions
     <div class="container">
       <div class="row cards">
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
+          <div class="card"><i class="fas fa-microphone"></i>AV Equipment Rental</div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-gavel"></i>Service FPO</div>
+          <div class="card"><i class="fas fa-microphone"></i>AV Equipment Setup</div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
+          <div class="card"><i class="fas fa-microphone"></i>AV Equipment Management</div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
+          <div class="card"><i class="fas fa-gavel"></i>Event Setup</div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
+          <div class="card"><i class="fas fa-microphone"></i>Conference Setup</div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
+          <div class="card"><i class="fas fa-microphone"></i>Expo / Convention Setup</div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Service FPO</div>
+          <div class="card"><i class="fas fa-gavel"></i>Mock Trials</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="staff" class="row flex">
+  <section id="staff" class="row flex d-none">
     <!--FPO info about you and Rick-->
     <div class="col-12 copy p-3">
       <h2>Staff</h2>
@@ -310,7 +298,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="#!">Step-Friends</a>
+    <span>Step-Friends</span>
   </div>
   <!-- Copyright -->
 
@@ -352,15 +340,15 @@
     const zip = $('#inputZip').val();
 
     // validate form hack
-    if (name == '' 
-        || email == '' 
-        || phone == '' 
-        || address == '' 
-        || city == '' 
-        || state == '' 
+    if (name == ''
+        || email == ''
+        || phone == ''
+        || address == ''
+        || city == ''
+        || state == ''
         || zip == '') {
       $('#val-error').show();
-      return false; 
+      return false;
     }
 
     $('#send-it').attr('disabled', true);
