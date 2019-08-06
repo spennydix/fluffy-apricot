@@ -10,6 +10,11 @@ section.row.flex {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+a#logoegg {
+  display: flex;
+  align-items: center;
+}
+
 div#navbarNav {
   justify-content: flex-end;
 }
@@ -31,6 +36,15 @@ section#welcomeMessage {
   margin-bottom: 4rem;
 }
 
+#welcomeMessage .welcome-content {
+  text-align: center;
+}
+
+#welcomeMessage .welcome-content h5 {
+  text-transform: uppercase;
+  opacity: .90;
+}
+
 #welcomeMessage .contact-form {
   color: initial;
   background: #f5f5f5;
@@ -38,11 +52,17 @@ section#welcomeMessage {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 800 !important;
+  line-height: 1.2;
+}
+
 @media screen and (orientation:landscape) {
   #welcomeMessage .contact-form {
     /*makes it break the grid*/
-    position: absolute;
-    right: 5rem;
+    /* position: absolute;
+    right: 5rem; */
     bottom: -7rem;
   }
 }
@@ -181,15 +201,13 @@ footer.page-footer a:hover {
   color: #4fc3f7
 }
 
-.footer-copyright.text-center.py-3 {
+.footer-copyright {
   background-color: rgba(0, 0, 0, 0.2);
   margin: 0 -15px;
-  font-size:80%;
+  font-size: 80%;
 }
+
 /* X footer X  */
-
-
-
 #loading, #success, #error, #val-error {
   display: none;
 }

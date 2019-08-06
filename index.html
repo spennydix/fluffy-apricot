@@ -43,21 +43,21 @@
         <h5 class="modal-title">You found an easter egg</h5>
       </div>
       <div class="modal-body">
-          <label for="passcode">Passcode</label>
-          <input id="passcode" type="password" class="form-control" id="inputPasscode" placeholder="hint: our best friend">
+        <label for="passcode">Passcode</label>
+        <input id="passcode" type="password" class="form-control" id="inputPasscode" placeholder="hint: our best friend">
       </div>
       <div class="modal-footer">
-      <button type="button" id="eggbutton" class="btn btn-primary">submit</button>
+        <button type="button" id="eggbutton" class="btn btn-primary">submit</button>
       </div>
     </div>
   </div>
 </div>
 
 <body class="container-fluid">
-  <nav class="navbar fixed-top navbar-dark navbar-expand-md">
+  <nav class="navbar fixed-top navbar-dark navbar-expand-md py-0">
     <a id="logoegg" class="navbar-brand" href="#">
       <img src="assets/logo-white.png" width="50" height="50" class="d-inline-block align-top" alt="">
-      <span>Prime Audio Visuals</span>
+      <h3 class="mb-0 px-2">Prime Audio Visuals</h3>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -81,8 +81,11 @@
   </nav>
   <section id="welcomeMessage" class="row flex">
     <!-- FPO Need a title here, something like, "always working for you" fluffy, but related to AV -->
-    <h1 class="tagline p-5 display-3">Audio & Visuals</h1>
-    <div class="contact-form col-10 offset-1 col-sm-5 offset-sm-0 col-lg-4 p-4 rellax" data-rellax-speed="1.5">
+    <div class="welcome-content col-12 col-sm-6 col-lg-7">
+      <h1 class="tagline px-5 pb-2 pt-5 mt-5 display-3 mt-sm-0 pt-sm-2">Audio & Visuals</h1>
+      <h5>Made easy, or some other by-line</h5>
+    </div>
+    <div class="contact-form col-10 offset-1 col-sm-6 offset-sm-0 col-lg-4 p-4 rellax" data-rellax-speed="1.5">
       <h4>Book us</h4>
       <div id="val-error">All fields are required.</div>
       <form>
@@ -173,22 +176,22 @@
     <div class="container">
       <div class="row cards">
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>AV Equipment Rental</div>
+          <div class="card"><i class="fas fa-ticket-alt"></i>AV Equipment Rental</div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>AV Equipment Setup</div>
+          <div class="card"><i class="fas fa-volume-up"></i>AV Equipment Setup</div>
         </div>
         <div class="col-6 col-md-3">
           <div class="card"><i class="fas fa-microphone"></i>AV Equipment Management</div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-gavel"></i>Event Setup</div>
+          <div class="card"><i class="fas fa-tools"></i>Event Setup</div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Conference Setup</div>
+          <div class="card"><i class="fas fa-users"></i>Conference Setup</div>
         </div>
         <div class="col-6 col-md-3">
-          <div class="card"><i class="fas fa-microphone"></i>Expo / Convention Setup</div>
+          <div class="card"><i class="fas fa-tv"></i>Expo / Convention Setup</div>
         </div>
         <div class="col-6 col-md-3">
           <div class="card"><i class="fas fa-gavel"></i>Mock Trials</div>
@@ -280,9 +283,9 @@
         <ul class="list-unstyled">
           <blockquote>
             <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim orci et ipsum mattis, sed congue magna pulvinar. Aenean ut justo dui."
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim orci et ipsum mattis, sed congue magna pulvinar. Aenean ut justo dui."
             </p>
-            <cite>–FPO Quote</cite>
+            <cite>– FPO Quote</cite>
           </blockquote>
         </ul>
       </div>
@@ -291,7 +294,7 @@
   </div>
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-1">© 2019 Copyright:
+  <div class="footer-copyright text-center py-2">© 2019 Copyright:
     <span>Step-Friends</span>
   </div>
   <!-- Copyright -->
@@ -303,7 +306,7 @@
 
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
@@ -334,13 +337,13 @@
     const zip = $('#inputZip').val();
 
     // validate form hack
-    if (name == ''
-        || email == ''
-        || phone == ''
-        || address == ''
-        || city == ''
-        || state == ''
-        || zip == '') {
+    if (name == '' ||
+      email == '' ||
+      phone == '' ||
+      address == '' ||
+      city == '' ||
+      state == '' ||
+      zip == '') {
       $('#val-error').show();
       return false;
     }
