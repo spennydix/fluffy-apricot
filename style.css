@@ -30,7 +30,8 @@ section {
 /* X Bootstrap Overwrites X */
 /* welcomeMessage */
 section#welcomeMessage {
-  background: center / cover url(assets/header-image.jpg) no-repeat;
+  /* background: center / cover url(assets/header-image.jpg) no-repeat; */
+  background: center / cover url(assets/conference1.jpg) no-repeat;
   color: #fff;
   position: relative;
   margin-bottom: 4rem;
